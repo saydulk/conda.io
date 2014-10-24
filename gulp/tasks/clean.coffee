@@ -3,10 +3,7 @@ clean = require "gulp-clean"
 
 gulp.task "clean", ->
   dirs = [
-    "release/vendor"
-    "release/coffee"
-    "release/sass"
-    "release/build.txt"
+    "build",
   ]
   for dir in dirs
     gulp.src dir

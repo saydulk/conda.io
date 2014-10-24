@@ -7,4 +7,4 @@ gulp.task "coffee", ->
   gulp.src paths.coffee.src
     .pipe coffee
       sourceMap: true
-    .pipe gulp.dest(paths.coffee.dest)
+    .pipe gulp.dest(paths.coffee.dest_path)

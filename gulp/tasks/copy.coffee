@@ -2,8 +2,8 @@ gulp = require "gulp"
 
 simpleCopyTask = require "../utils/simpleCopyTask"
 
-simpleCopyTask "fonts"
-simpleCopyTask "img"
-simpleCopyTask "requirejs"
+simpleCopyTask "html"
+simpleCopyTask "bower"
+# simpleCopyTask "requirejs"
 
-gulp.task "copy", ["copy-fonts", "copy-img", "copy-requirejs"]
+gulp.task "copy", ["copy-html", "copy-bower", ]

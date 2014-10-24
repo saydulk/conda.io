@@ -1,4 +1,12 @@
 module.exports =
+  html:
+    src: "static/**/*.html"
+    dest: "build/"
+
+  bower:
+    src: "bower_components/**"
+    dest: "build/bower_components"
+
   fonts:
     src: "static/vendor/font-awesome/font/*.*"
     dest: "static/font/"
@@ -9,10 +17,10 @@ module.exports =
     dest: "build/img"
 
   sass:
-    src: "source/scss/*.scss"
+    src: "static/scss/*.scss"
     dest: "build/css"
 
   coffee:
-    src: "source/coffee/index.coffee"
-    dest_filename: "index.js"
+    src: "static/coffee/app.coffee"
+    dest_filename: "app.js"
     dest_path: "build/js"

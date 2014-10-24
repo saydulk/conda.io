@@ -4,8 +4,5 @@ paths = require "../paths"
 
 gulp.task "sass", ->
   gulp.src paths.sass.src
-    .pipe sass
-      includePaths: [
-        'bower_components/foundation/scss'
-      ]
+    .pipe sass()
     .pipe gulp.dest(paths.sass.dest)

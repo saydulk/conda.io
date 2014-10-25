@@ -11,6 +11,7 @@ def static_helper(filename):
     return url_for('static', filename=filename)
 
 
+# TODO create separate package for this
 class ContinuumApp(Flask):
     def __init__(self, *args, **kwargs):
         if not 'static_folder' in kwargs:

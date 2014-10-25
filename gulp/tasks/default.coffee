@@ -18,6 +18,10 @@ createServer = ->
   server.stderr.setEncoding "utf8"
   server.stderr.on "data", serverOutput
 
+  server.on "exit", ->
+    gutil.log gutil.colors.red "flask server has stopped"
+    process.exit -1
+
   server
 
 gulp.task "default", ["build"], ->

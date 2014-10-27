@@ -8,8 +8,8 @@ module.exports =
     dest: "build/bower_components"
 
   fonts:
-    src: "static/vendor/font-awesome/font/*.*"
-    dest: "static/font/"
+    src: "static/fonts/**/*.*"
+    dest: "build/fonts/"
 
   # TODO: Determine if we still actually need this
   img:

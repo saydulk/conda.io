@@ -1,0 +1,6 @@
+{% macro panel(title) -%}
+	<div class="panel" data-equalizer-watch>
+		<h3>{{ title }}</h3>
+		{{ caller() }}
+	</div>
+{%- endmacro %}

@@ -1,0 +1,9 @@
+// override for buttons in header
+.header {
+  .navigation {
+    vertical-align: bottom;
+    .button {
+      margin-bottom: 0;
+    }
+  }
+}

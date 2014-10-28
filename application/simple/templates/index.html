@@ -1,50 +1,73 @@
 {% extends "base.html" %}
+{% import "macros/foundation.html" as foundation %}
 
-{% block main %}
+{% block title %}Interactive Style Guide | {{ super() }}{% endblock %}
 
-  <div class="row">
+{% block content %}
 
-    <div class="large-8 columns">
-      <h4>This is a content section.</h4>
-      <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.</p>
-      <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.</p>
-      <p><a href="#" class="secondary small button">Next Page →</a></p>
-    </div>
+  <div class="row" style="margin-top: 20px;">
 
-    <div class="large-4 columns">
-
-
-
-      <ul class="small-block-grid-3">
-        <li><a href="#"><img src="http://placehold.it/120x120"/></a></li>
-        <li><a href="#"><img src="http://placehold.it/120x120"/></a></li>
-        <li><a href="#"><img src="http://placehold.it/120x120"/></a></li>
-        <li><a href="#"><img src="http://placehold.it/120x120"/></a></li>
-        <li><a href="#"><img src="http://placehold.it/120x120"/></a></li>
-        <li><a href="#"><img src="http://placehold.it/120x120"/></a></li>
-      </ul>
-    </div>
-
-  </div>
-
-
-
-  <div class="row">
     <div class="large-12 columns">
 
-      <div class="panel">
-        <h4>Get in touch!</h4>
+      <h1>Continuum's Style Guide</h1>
 
-        <div class="row">
-          <div class="large-9 columns">
-            <p>We'd love to hear from you, you attractive person you.</p>
-          </div>
-          <div class="large-3 columns">
-            <a href="#" class="radius button right">Contact Us</a>
-          </div>
+      <p>
+        Welcome to <a href="http://www.continuum.io/">Continuum's</a>
+        style guide.  This outlines how to use Continuum's internal styling
+        for your demo or web application.
+      </p>
+
+      <div class="row callouts" data-equalizer>
+        <div class="small-1 large-4 columns">
+          {% call foundation.panel("Static Sites") %}
+            <p>
+              You can use this scaffolding to build a static site that can be
+              hosted anywhere.  <a href="#TODO">This section</a> shows you how
+              and introduces you to <a href="http://pages.github.com/">GitHub Pages</a>
+              hosting and the commands built-in to this skeleton that make hosting
+              there a breeze!
+            </p>
+
+            <p class="right call-to-action">
+              <a href="{{ url_for('.index', page="static" ) }}">&raquo; Learn More</a>
+            </p>
+
+            <br> {# TODO: fix with CSS #}
+          {% endcall %}
         </div>
-      </div>
 
+        <div class="small-1 large-4 columns">
+          {% call foundation.panel("Build a Flask App") %}
+            <p>
+              This entire style guide is built on top of <a href="http://flask.pocoo.org">Flask</a>
+              and you can use it as the base to build your custom Flask applications
+              on top of.  <a href="#TODO">This section</a> shows you how to do that.
+            </p>
+
+            <p class="right call-to-action">
+              <a href="#TODO">&raquo; Learn More</a>
+            </p>
+
+            <br> {# TODO: fix with CSS #}
+          {% endcall %}
+        </div>
+
+        <div class="small-1 large-4 columns">
+          {% call foundation.panel("Using Foundation" ) %}
+            <p>
+              <a href="#TODO">This section</a> details what you need to know to deal with the
+              <a href="http://foundation.zurb.com/">Foundation Framework</a>.
+            </p>
+
+            <p class="right call-to-action">
+              <a href="#TODO">&raquo; Learn More</a>
+            </p>
+
+            <br> {# TODO: fix with CSS #}
+          {% endcall %}
+        </div>
+
+      </div>
     </div>
   </div>
 {% endblock %}

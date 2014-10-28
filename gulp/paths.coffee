@@ -11,6 +11,10 @@ module.exports =
     src: "static/fonts/**/*.*"
     dest: "build/fonts/"
 
+  images:
+    src: "static/images/**/*.*"
+    dest: "build/images/"
+
   # TODO: Determine if we still actually need this
   img:
     src: "static/img/**/*.*"

@@ -1,1 +1,18 @@
+$continuum-blue: #174977;
+$continuum-blue-light: #7199bd; // saturation * .5, brightness * golden ratio
+
+$continuum-green: #2f7618;
+$continuum-green-light: #84bd71; // saturation * .5, brightness * golden ratio
+
+
 // over ride any Foundation settings here
+$primary-color: $continuum-blue;
+
+$header-font-family: "opensans-semibold";
+$header-font-color: $continuum-blue;
+
+$paragraph-font-family: "opensans-regular";
+
+$anchor-font-color: $continuum-blue-light;
+a { font-family: "opensans-semibold"; }
+

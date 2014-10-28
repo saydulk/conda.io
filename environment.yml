@@ -1,0 +1,8 @@
+# You can install this with the experimental [`conda-env`][1] package.
+#
+#   conda env create -n design --file=environment.yml
+channels:
+  - javascript
+dependencies:
+  - bower
+  - gulp

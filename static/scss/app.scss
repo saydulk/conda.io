@@ -1,2 +1,12 @@
 @import "settings";
+@import "fonts";
 @import "dependencies";
+
+@import "components/header";
+
+.call-to-action {
+  position: absolute;
+  right: $column-gutter;
+  bottom: $column-gutter / 4;
+}
+

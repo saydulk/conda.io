@@ -1,7 +1,7 @@
 gulp = require "gulp"
 gutil = require "gulp-util"
 paths = require "../paths"
-{spawn} = require "child_process"
+{exec} = require "child_process"
 
 createServer = ->
   prefix = gutil.colors.cyan "flask:"
@@ -11,7 +11,7 @@ createServer = ->
       .forEach (line) ->
         gutil.log "#{prefix} #{gutil.colors.grey line}"
 
-  server = spawn "python", ["server.py", ]
+  server = exec "python", ["server.py", ]
   server.stdout.setEncoding "utf8"
   server.stdout.on "data", serverOutput
 

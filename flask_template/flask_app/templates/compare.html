@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% set active_page = "compare" %}
+{% block content %}
+
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+          <div class="row placeholders">
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img data-src="holder.js/800x800/auto/gray" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Label</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+            <h4>MetaData</h4>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+          </div>
+
+
+
+         {% for row in range(num_images) %}
+            {% if row%4 == 0 %}
+            <div class="row placeholders">
+             <div class="col-xs-6 col-sm-3 placeholder">
+              <img data-src="holder.js/100x100/auto/industrial" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Label</h4>
+              <span class="text-muted">Something else</span>
+             </div>
+            {% endif %}
+            {% if row%4 == 1 %}
+             <div class="col-xs-6 col-sm-3 placeholder">
+              <img data-src="holder.js/100x100/auto/social" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Label</h4>
+              <span class="text-muted">Something else</span>
+             </div>
+            {% endif %}
+            {% if row%4 == 2 %}
+             <div class="col-xs-6 col-sm-3 placeholder">
+              <img data-src="holder.js/100x100/auto/industrial" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Label</h4>
+              <span class="text-muted">Something else</span>
+             </div>
+            {% endif %}
+            {% if row%4 == 3 %}
+             <div class="col-xs-6 col-sm-3 placeholder">
+              <img data-src="holder.js/100x100/auto/lava" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Label</h4>
+              <span class="text-muted">Something else</span>
+             </div>
+            </div>
+            {% endif %}
+         {% endfor %}
+
+
+
+
+
+{% endblock content %}

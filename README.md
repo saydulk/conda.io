@@ -15,7 +15,10 @@ bower install
 gulp
 ```
 
-Note, [gulp][] will run the [Flask][] server via `server.py`.
+Note, [gulp][] will run the [Flask][] server via `server.py` after it has
+compiled all of the required assets.
+
+
 
 
 [gulp]: http://gulpjs.com

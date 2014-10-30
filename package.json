@@ -1,6 +1,15 @@
 {
   "description": "Continuum Styles",
+  "browser": {
+  },
+  "browserify": {
+    "transform": ["coffeeify", "browserify-shim"]
+  },
+  "browserify-shim": {
+  },
   "dependencies": {
+    "browserify": "^6.2.0",
+    "browserify-shim": "^3.8.0",
     "coffee-script": "^1.8.0",
     "coffeeify": "^0.7.0",
     "gulp": "^3.8.9",

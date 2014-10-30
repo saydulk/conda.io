@@ -4,6 +4,7 @@ module.exports =
     dest: "build/"
 
   bower:
+    path: "bower_components"
     src: "bower_components/**"
     dest: "build/bower_components"
 
@@ -26,6 +27,6 @@ module.exports =
     dest: "build/css"
 
   coffee:
-    src: "static/coffee/app.coffee"
+    src: "./static/coffee/app.coffee"
     dest_filename: "app.js"
     dest_path: "build/js"

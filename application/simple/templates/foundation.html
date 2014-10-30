@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% import "macros/foundation.html" as foundation %}
+
+{% block content %}
+
+<h2>Foundation Kitchen Sink</h2>
+
+<p>
+	This file showcases most of the styles that
+	<a href="http://foundation.zurb.com/">Foundation</a> provides
+	and demonstrates many of the <a href="http://jinja.pocoo.org/docs/dev/">Jinja2</a>
+	<a href="http://jinja.pocoo.org/docs/dev/templates/#macros">macros</a>
+	that are available.
+</p>
+
+<p>
+	For full documentation of all of Foundation's features, please review
+	the <a href="http://foundation.zurb.com/docs/">Foundation Docs</a>.
+</p>
+
+<hr>
+
+{{ foundation.headers.h3("Grid") }}
+{{ foundation.headers.h3("Buttons") }}
+{{ foundation.headers.h3("Forms") }}
+{{ foundation.headers.h3("Navigation") }}
+
+{% endblock %}

@@ -1,3 +1,7 @@
+{# NOTE: you must do this `set` if you want nested macros #}
+{% import "macros/foundation/headers.html" as _headers %}
+{% set headers = _headers %}
+
 {% macro panel(title) -%}
 	<div class="panel" data-equalizer-watch>
 		<h3>{{ title }}</h3>

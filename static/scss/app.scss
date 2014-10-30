@@ -11,3 +11,11 @@
   bottom: $column-gutter / 4;
 }
 
+
+pre[data-codeblock] {
+  background-color: #eee;
+}
+code[data-language] {
+  background: transparent;
+  border: 0;
+}

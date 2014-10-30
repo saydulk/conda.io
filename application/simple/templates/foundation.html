@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% import "macros/foundation.html" as foundation %}
+{% import "macros/code.html"  as code %}
 
 {% block content %}
 
@@ -38,11 +39,13 @@
   Use this Grid when you need to mimic the side-bar + main content.
 </p>
 
-<pre data-codeblock><code data-language="html">&lt;div class="row">
-  &lt;div class="large-3 columns">.large-3 .columns&lt;/div>
-  &lt;div class="large-9 columns">.large-9 .columns&lt;/div>
-&lt;/div>
-</code></pre>
+
+{% call code.block("html") %}
+<div class="row">
+  <div class="large-3 columns">.large-3 .columns</div>
+  <div class="large-9 columns">.large-9 .columns</div>
+</div>
+{% endcall %}
 
 <div class="row grid-examples">
   <div class="large-3 columns">.large-3 .columns</div>

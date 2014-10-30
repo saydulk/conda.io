@@ -6,21 +6,57 @@
 <h2>Foundation Kitchen Sink</h2>
 
 <p>
-	This file showcases most of the styles that
-	<a href="http://foundation.zurb.com/">Foundation</a> provides
-	and demonstrates many of the <a href="http://jinja.pocoo.org/docs/dev/">Jinja2</a>
-	<a href="http://jinja.pocoo.org/docs/dev/templates/#macros">macros</a>
-	that are available.
+  This file showcases most of the styles that
+  <a href="http://foundation.zurb.com/">Foundation</a> provides
+  and demonstrates many of the <a href="http://jinja.pocoo.org/docs/dev/">Jinja2</a>
+  <a href="http://jinja.pocoo.org/docs/dev/templates/#macros">macros</a>
+  that are available.
 </p>
 
 <p>
-	For full documentation of all of Foundation's features, please review
-	the <a href="http://foundation.zurb.com/docs/">Foundation Docs</a>.
+  For full documentation of all of Foundation's features, please review
+  the <a href="http://foundation.zurb.com/docs/">Foundation Docs</a>.
 </p>
 
 <hr>
 
+
 {{ foundation.headers.h3("Grid") }}
+
+<p>
+  Grids provide a layout mechanism for organizing content into a grid.
+  Foundation's
+  <a href="http://foundation.zurb.com/docs/components/grid.html">built-in grid</a>
+  allows for a large amount of flexibility, but for consistency, it's best to
+  use one of the following grids.
+</p>
+
+
+{{ foundation.headers.h4("3 / 9 Grid", "3-9-grid") }}
+
+<p>
+  Use this Grid when you need to mimic the side-bar + main content.
+</p>
+
+<pre data-codeblock><code data-language="html">&lt;div class="row">
+  &lt;div class="large-3 columns">.large-3 .columns&lt;/div>
+  &lt;div class="large-9 columns">.large-9 .columns&lt;/div>
+&lt;/div>
+</code></pre>
+
+<!-- <div class="row">
+  <div class="large-12 columns">
+ -->    <div class="row grid-examples">
+      <div class="large-3 columns">.large-3 .columns</div>
+      <div class="large-9 columns">.large-9 .columns</div>
+    </div>
+
+<!--   </div>
+</div>
+ -->
+<hr>
+
+
 {{ foundation.headers.h3("Buttons") }}
 {{ foundation.headers.h3("Forms") }}
 {{ foundation.headers.h3("Navigation") }}

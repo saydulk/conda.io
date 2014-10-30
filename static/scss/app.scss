@@ -5,6 +5,9 @@
 @import "components/header";
 @import "components/typography";
 
+// This can be removed for production sites:
+@import "components/examples";
+
 .call-to-action {
   position: absolute;
   right: $column-gutter;

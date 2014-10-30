@@ -41,7 +41,7 @@ gulp.task "default", ["build"], ->
   server = createServer()
 
   gulp.watch "source/coffee/**/*.*", ["scripts", ]
-  gulp.watch paths.sass.src, ["sass", ]
+  gulp.watch paths.sass.watch, ["sass", ]
 
   process.handleExit = ->
     gutil.log "calling server.shutodwn"

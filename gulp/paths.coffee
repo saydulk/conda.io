@@ -22,6 +22,7 @@ module.exports =
 
   sass:
     src: "static/scss/*.scss"
+    watch: "static/scss/**/*.scss"
     dest: "build/css"
 
   coffee:

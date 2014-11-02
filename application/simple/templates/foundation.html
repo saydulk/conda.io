@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% import "macros/foundation.html" as foundation %}
 {% import "macros/code.html"  as code %}
+{% import "macros/examples.html" as examples %}
 
 {% block content %}
 
@@ -39,18 +40,8 @@
   Use this grid when you need to mimic the side-bar + main content.
 </p>
 
+{{ examples.grid_with_code(["large-3", "large-9"]) }}
 
-{% call code.block("html") %}
-<div class="row">
-  <div class="large-3 columns">.large-3 .columns</div>
-  <div class="large-9 columns">.large-9 .columns</div>
-</div>
-{% endcall %}
-
-<div class="row grid-examples">
-  <div class="large-3 columns">.large-3 .columns</div>
-  <div class="large-9 columns">.large-9 .columns</div>
-</div>
 
 {{ foundation.headers.h4("3 / 6 / 3 Grid", "3-6-3-grid") }}
 
@@ -59,19 +50,24 @@
   main content in the middle.
 </p>
 
-{% call code.block("html") %}
-<div class="row">
-  <div class="large-3 columns">.large-3 .columns</div>
-  <div class="large-6 columns">.large-6 .columns</div>
-  <div class="large-3 columns">.large-3 .columns</div>
-</div>
-{% endcall %}
+{{ examples.grid_with_code(["large-3", "large-6", "large-3"]) }}
 
-<div class="row grid-examples">
-  <div class="large-3 columns">.large-3 .columns</div>
-  <div class="large-6 columns">.large-6 .columns</div>
-  <div class="large-3 columns">.large-3 .columns</div>
-</div>
+
+{{ foundation.headers.h4("Other Grids", "other-grids") }}
+
+<p>
+  Below are a collection of other grids that you can use.  Be sparing in their
+  use.  They're provided here for flexibility, but should not be used
+  sporadically.  The key to a good grid-based layout is consistency.  Don't
+  switch between different layouts on different pages without good reason.
+</p>
+
+
+{{ examples.grid(["large-2", "large-10" ]) }}
+{{ examples.grid(["large-4", "large-8" ]) }}
+{{ examples.grid(["large-6", "large-6" ]) }}
+{{ examples.grid(["large-8", "large-4" ]) }}
+{{ examples.grid(["large-10", "large-2" ]) }}
 
 <hr>
 

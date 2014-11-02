@@ -1,0 +1,16 @@
+{% import "macros/code.html"  as code %}
+
+{# Note: this spacing for so <pre><code> blocks are rendered properly #}
+{% macro grid(classes, example_class=True) -%}
+<div class="row{% if example_class %} grid-examples{% endif %}">
+{% for class in classes %}  <div class="{{ class }} columns">.{{ class }} .columns</div>
+{% endfor %}</div>
+{%- endmacro %}
+
+
+{% macro grid_with_code(classes) -%}
+  {% call code.block("html") %}
+    {{ grid(classes, example_class=False )}}
+  {% endcall %}
+  {{ grid(classes) }}
+{%- endmacro %}

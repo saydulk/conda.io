@@ -4,5 +4,7 @@
 channels:
   - javascript
 dependencies:
+  - python<=3
+  - flask
   - bower
   - gulp

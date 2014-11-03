@@ -8,7 +8,8 @@ Skeleton site for generating a Flask or static website
 
 ```bash
 conda env create -n design --file environment.yml
-# or, create a new environment and install the packages found there
+# or if you don't have conda-env installed
+conda create -c javascript -n design "python<3" flask bower gulp
 source activate design
 npm install
 bower install

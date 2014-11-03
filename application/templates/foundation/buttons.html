@@ -129,11 +129,12 @@
   other action is taken by the user.
 </p>
 
-<div>
-  {{ foundation.button("#", "Disabled", "disabled") }}
-  {{ foundation.button("#", "Disabled Success", "disabled success") }}
-  {{ foundation.button("#", "Disabled Alert", "disabled alert") }}
-</div>
+{% call examples.code_table() %}
+  {{ examples.code_row(foundation.button("#", "Primary", "disabled")) }}
+  {{ examples.code_row(foundation.button("#", "Secondary", "secondary disabled")) }}
+  {{ examples.code_row(foundation.button("#", "Success", "success disabled")) }}
+  {{ examples.code_row(foundation.button("#", "Alert", "alert disabled")) }}
+{% endcall %}
 
 
 {{ foundation.headers.h4("Expanded Buttons") }}

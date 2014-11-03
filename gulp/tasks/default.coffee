@@ -1,5 +1,6 @@
 gulp = require "gulp"
 gutil = require "gulp-util"
+livereload = require "gulp-livereload"
 paths = require "../paths"
 {spawn} = require "child_process"
 psTree = require "ps-tree"
@@ -38,6 +39,7 @@ createServer = ->
   server
 
 gulp.task "default", ["build"], ->
+  livereload.listen auto: true
   server = createServer()
 
   gulp.watch "source/coffee/**/*.*", ["scripts", ]

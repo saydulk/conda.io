@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block main_container %}
+  {% block hero_container %}
+    <div class="row">
+     <div class="large columns">
+        {% block hero %}
+          <p><img src="http://placehold.it/1000x400&text=[banner img]"/></p>
+        {% endblock %}
+     </div>
+    </div>
+  {% endblock %}
+
+  {{ super() }}
+{% endblock %}

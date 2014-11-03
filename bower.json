@@ -1,0 +1,7 @@
+{
+  "name": "foundation-libsass-template",
+  "dependencies": {
+    "foundation": "zurb/foundation#29ffaad25daa4cfd99f5c9da4143baf89d883565",
+    "rainbow": "~1.1.9"
+  }
+}

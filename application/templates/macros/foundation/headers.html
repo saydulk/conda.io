@@ -1,0 +1,15 @@
+{% macro header(level, text, id ) -%}
+  <h{{ level }}>
+    <a id="{% if id %}{{ id }}{% else %}{{ text.lower().replace(' ', '-') }}{% endif %}"
+       href="#{% if id %}{{ id }}{% else %}{{ text.lower().replace(' ', '-') }}{% endif %}">
+      {{ text }}
+      <small class="anchor">#</small>
+    </a>
+  </h{{ level }}>
+{%- endmacro %}
+
+{% macro h1(text, id) -%}{{ header("1", text, id ) }}{%- endmacro %}
+{% macro h2(text, id) -%}{{ header("2", text, id ) }}{%- endmacro %}
+{% macro h3(text, id) -%}{{ header("3", text, id ) }}{%- endmacro %}
+{% macro h4(text, id) -%}{{ header("4", text, id ) }}{%- endmacro %}
+{% macro h5(text, id) -%}{{ header("5", text, id ) }}{%- endmacro %}

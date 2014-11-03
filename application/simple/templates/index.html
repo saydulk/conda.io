@@ -55,12 +55,12 @@
         <div class="small-1 large-4 columns">
           {% call foundation.panel("Using Foundation" ) %}
             <p>
-              <a href="#TODO">This section</a> details what you need to know to deal with the
+              <a href="{{ url_for('.index', page='foundation') }}">This section</a> details what you need to know to deal with the
               <a href="http://foundation.zurb.com/">Foundation Framework</a>.
             </p>
 
             <p class="right call-to-action">
-              <a href="#TODO">&raquo; Learn More</a>
+              <a href="{{ url_for('.index', page='foundation') }}">&raquo; Learn More</a>
             </p>
 
             <br> {# TODO: fix with CSS #}

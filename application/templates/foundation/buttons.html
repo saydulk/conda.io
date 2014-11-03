@@ -1,0 +1,167 @@
+{% import "macros/foundation.html" as foundation %}
+{% import "macros/code.html" as code %}
+{% import "macros/examples.html" as examples %}
+
+<p>
+  Buttons are a key means of interacting with any application,
+  whether for downloading the latest version or confirming that
+  you want to continue.  Below are the various buttons that are
+  available.
+</p>
+
+<p>
+  You should use the <em>default</em> button style for all buttons
+  that are not a primary action.  Buttons that denote a positive
+  action (creation, save, confirmation, and so on) should use the
+  <code>success</code> class while buttons that denote a destructive
+  action (trash, removal, and so on) should use <code>alert</code>.
+</p>
+
+{{ foundation.headers.h4("Button Sizes") }}
+<p>
+  You should always default to using the default style.
+</p>
+
+{% call code.block("html") %}
+<a href="#" class="button">
+  Some Action
+</a>
+{% endcall %}
+
+{{ foundation.button("#", "Some Action") }}
+
+<p>
+  There are other sizes available for use when the design explicitly
+  calls for it.  Button sizes should be used consistently throughout
+  a site for the role that the button is in use for.
+</p>
+
+{% call foundation.alert_box(extra="warning", close=False) %}
+  <p><strong>Don't Mix Sizes!</strong></p>
+  <p>
+    You should <em>never</em> user multiple size buttons to indicate
+    which action the user should take.
+  </p>
+
+  <div>
+    {{ foundation.button("#", "Cancel", "tiny") }}
+    {{ foundation.button("#", "Continue", "large") }}
+  </div>
+{% endcall %}
+
+
+<p>
+  The following sizes are available:
+</p>
+
+{% call examples.code_table() %}
+  {{ examples.code_row(foundation.button("#", "Tiny", "tiny")) }}
+  {{ examples.code_row(foundation.button("#", "Small", "small")) }}
+  {{ examples.code_row(foundation.button("#", "Default")) }}
+  {{ examples.code_row(foundation.button("#", "Large", "large")) }}
+{% endcall %}
+
+
+{{ foundation.headers.h4("Colors") }}
+
+<p>
+  Consistent color use plays an important role in guiding the user's actions
+  to ensure they're able to successfully navigate your site or application.
+</p>
+
+{% call foundation.alert_box("info", close=False) %}
+  When in doubt, use default.
+{% endcall %}
+
+{% set foo="barz" %}
+<p>
+  You should use the default button color for <em>most</em> actions.  Where
+  two or more actions are available, style the primary action with the default
+  behavior, and add the <code>secondary</code> class to all other actions.
+</p>
+
+<p>
+  You should only use <code>success</code> for final actions that are positive
+  such as finishing an account creation, signing up for a mailing list, or
+  downloading software.  The user should not have to click another button or
+  link to finish an action after clicking on a <code>success</code> button.
+</p>
+
+<p>
+  Likewise, you should only use <code>alert</code> for actions that are
+  considered destructive such as deleting an account.
+</p>
+
+
+{% call examples.code_table() %}
+  {{ examples.code_row(foundation.button("#", "Primary")) }}
+  {{ examples.code_row(foundation.button("#", "Secondary", "secondary")) }}
+  {{ examples.code_row(foundation.button("#", "Success", "success")) }}
+  {{ examples.code_row(foundation.button("#", "Alert", "alert")) }}
+{% endcall %}
+
+{{ foundation.headers.h4("Rounded / Radius") }}
+<p>
+  These buttons can be combined with other styles.  The Continuum style does
+  <em>not</em> use rounded or radius buttons, but client projects might call
+  for them.  When in doubt, leave them off.
+</p>
+
+<div>
+{% call examples.code_table() %}
+  {{ examples.code_row(foundation.button("#", "Primary", "radius")) }}
+  {{ examples.code_row(foundation.button("#", "Secondary", "radius secondary")) }}
+  {{ examples.code_row(foundation.button("#", "Alert", "radius alert")) }}
+  {{ examples.code_row(foundation.button("#", "Success", "radius success")) }}
+{% endcall %}
+
+{% call examples.code_table() %}
+  {{ examples.code_row(foundation.button("#", "Primary", "round")) }}
+  {{ examples.code_row(foundation.button("#", "Secondary", "round secondary")) }}
+  {{ examples.code_row(foundation.button("#", "Alert", "round alert")) }}
+  {{ examples.code_row(foundation.button("#", "Success", "round success")) }}
+{% endcall %}
+
+{{ foundation.headers.h4("Disabled") }}
+<p>
+  This button can be combined with other button styles to show it as disabled.
+  You should use this whenever a button <em>can</em> be enabled after some
+  other action is taken by the user.
+</p>
+
+<div>
+  {{ foundation.button("#", "Disabled", "disabled") }}
+  {{ foundation.button("#", "Disabled Success", "disabled success") }}
+  {{ foundation.button("#", "Disabled Alert", "disabled alert") }}
+</div>
+
+
+{{ foundation.headers.h4("Expanded Buttons") }}
+<p>
+  Add <code>expand</code> to any button that you want to take up the entire
+  space that it is alotted.  This is particularlly useful when dealing with
+  buttons in the mobile space.
+</p>
+
+<div class="row">
+  <div class="large-6 columns">
+    {{ foundation.button("#", "Expanded Secondary", "expand secondary") }}
+  </div>
+  <div class="large-6 columns">
+    {{ foundation.button("#", "Expanded Success", "expand success") }}
+  </div>
+</div>
+
+<div class="row">
+  <div class="large-4 columns">
+    {{ foundation.button("#", "Expanded", "expand") }}
+  </div>
+  <div class="large-4 columns">
+    {{ foundation.button("#", "Expanded Secondary", "expand secondary") }}
+  </div>
+  <div class="large-4 columns">
+    {{ foundation.button("#", "Expanded Success", "expand success") }}
+  </div>
+</div>
+
+<hr>

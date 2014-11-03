@@ -14,3 +14,24 @@
   {% endcall %}
   {{ grid(classes) }}
 {%- endmacro %}
+
+
+{% macro code_row(html) -%}
+  <tr>
+    <td>{% call code.block("html") %}{{ html }}{% endcall %}</td>
+    <td>{{ html }}</td>
+  </tr>
+{%- endmacro %}
+
+{% macro code_table() -%}
+<table>
+  <thead>
+    <th>Code</th>
+    <th>Rendered</th>
+  </thead>
+
+  <tbody>
+    {{ caller() }}
+  </tbody>
+</table>
+{%- endmacro %}

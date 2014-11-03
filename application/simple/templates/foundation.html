@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% import "macros/foundation.html" as foundation %}
+{% import "macros/examples.html"  as examples %}
 
 {% block content %}
 
@@ -28,6 +29,16 @@
 {% include "foundation/buttons.html" %}
 <hr>
 
+{{ foundation.headers.h3("Alerts") }}
+
+{{ examples.alert_box("Standard Alert Box") }}
+{{ examples.alert_box("Secondary Alert Box", "secondary") }}
+{{ examples.alert_box("Info Alert Box", "info") }}
+{{ examples.alert_box("Success Alert Box", "success") }}
+{{ examples.alert_box("Warning Alert Box", "warning") }}
+{{ examples.alert_box("Alert Box", "alert") }}
+
+<hr>
 
 {{ foundation.headers.h3("Forms") }}
 {{ foundation.headers.h3("Navigation") }}

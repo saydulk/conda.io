@@ -1,6 +1,9 @@
 # You can install this with the experimental [`conda-env`][1] package.
 #
 #   conda env create -n design --file=environment.yml
+#
+# [1]: https://github.com/conda/conda-env/
+name: design
 channels:
   - javascript
 dependencies:

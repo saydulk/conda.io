@@ -19,7 +19,7 @@
 {% macro code_row(html) -%}
   <tr>
     <td>{% call code.block("html") %}{{ html }}{% endcall %}</td>
-    <td>{{ html }}</td>
+    <td style="min-width: 150px;">{{ html }}</td>
   </tr>
 {%- endmacro %}
 

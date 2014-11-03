@@ -144,6 +144,19 @@
   buttons in the mobile space.
 </p>
 
+{% call examples.code_table() %}
+  {{ examples.code_row(foundation.button("#", "Primary", "expand")) }}
+  {{ examples.code_row(foundation.button("#", "Secondary", "secondary expand")) }}
+  {{ examples.code_row(foundation.button("#", "Success", "success expand")) }}
+  {{ examples.code_row(foundation.button("#", "Alert", "alert expand")) }}
+{% endcall %}
+
+<p>
+  Here are some examples of buttons that use grids to limit their size.
+  Note that these are responsive by nature as their containers change size
+  on different devices.
+</p>
+
 <div class="row">
   <div class="large-6 columns">
     {{ foundation.button("#", "Expanded Secondary", "expand secondary") }}

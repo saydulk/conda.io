@@ -4,7 +4,6 @@ from .flask import ContinuumFlask
 
 
 def create_app():
-    from .simple import views as simple_views
     return ContinuumFlask(
         __name__,
         # Change to the name of your settings module
@@ -15,6 +14,6 @@ def create_app():
 
         # Register any further blue prints here as well
         blueprints=[
-            simple_views.blueprint,
+            'application.simple.views',
         ]
     )

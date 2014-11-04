@@ -25,8 +25,9 @@ class ContinuumFlask(Flask):
     def setup_blueprints(self, blueprints):
         if blueprints is None:
             return
-        for b in blueprints:
-            self.register_blueprint(import_string(b).blueprint)
+        with self.app_context():
+            for b in blueprints:
+                self.register_blueprint(import_string(b).blueprint)
 
     def setup_jinja_context_variables(self):
         self.jinja_env.globals.update({

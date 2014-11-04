@@ -2,6 +2,7 @@ from __future__ import absolute_import
 from os.path import join
 
 from flask import Flask
+from werkzeug.utils import import_string
 
 from . import helpers
 from . import settings
@@ -24,8 +25,9 @@ class ContinuumFlask(Flask):
     def setup_blueprints(self, blueprints):
         if blueprints is None:
             return
-        for b in blueprints:
-            self.register_blueprint(b)
+        with self.app_context():
+            for b in blueprints:
+                self.register_blueprint(import_string(b).blueprint)
 
     def setup_jinja_context_variables(self):
         self.jinja_env.globals.update({

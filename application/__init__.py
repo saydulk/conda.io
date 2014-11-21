@@ -1,10 +1,11 @@
 from __future__ import absolute_import, print_function
 
+from continuum_flask import Flask
 from .flask import ContinuumFlask
 
 
 def create_app():
-    return ContinuumFlask(
+    return Flask(
         __name__,
         # Change to the name of your settings module
         #

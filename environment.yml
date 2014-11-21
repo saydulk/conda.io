@@ -6,8 +6,10 @@
 name: design
 channels:
   - javascript
+  - continuumio
 dependencies:
   - python<=3
   - flask
   - bower
   - gulp
+  - continuum-flask

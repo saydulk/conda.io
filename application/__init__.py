@@ -1,7 +1,6 @@
 from __future__ import absolute_import, print_function
 
 from continuum_flask import Flask
-from .flask import ContinuumFlask
 
 
 def create_app():

@@ -1,5 +1,6 @@
 gulp = require "gulp"
-clean = require "gulp-clean"
+del = require "del"
+vinylPaths = require "vinyl-paths"
 
 gulp.task "clean", ->
   dirs = [
@@ -7,4 +8,4 @@ gulp.task "clean", ->
   ]
   for dir in dirs
     gulp.src dir
-      .pipe clean()
+      .pipe vinylPaths del

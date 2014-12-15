@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% import "macros/foundation.html" as foundation %}
+{% import "macros/examples.html"  as examples %}
+
+{% block content %}
+
+<h2>Foundation Kitchen Sink</h2>
+
+<p>
+  This file showcases most of the styles that
+  <a href="http://foundation.zurb.com/">Foundation</a> provides
+  and demonstrates many of the <a href="http://jinja.pocoo.org/docs/dev/">Jinja2</a>
+  <a href="http://jinja.pocoo.org/docs/dev/templates/#macros">macros</a>
+  that are available.
+</p>
+
+<p>
+  For full documentation of all of Foundation's features, please review
+  the <a href="http://foundation.zurb.com/docs/">Foundation Docs</a>.
+</p>
+
+<hr>
+
+{% include "foundation/grids.html" %}
+
+<hr>
+
+{{ foundation.headers.h3("Buttons") }}
+{% include "foundation/buttons.html" %}
+<hr>
+
+{{ foundation.headers.h3("Alerts") }}
+
+{{ examples.alert_box("Standard Alert Box") }}
+{{ examples.alert_box("Secondary Alert Box", "secondary") }}
+{{ examples.alert_box("Info Alert Box", "info") }}
+{{ examples.alert_box("Success Alert Box", "success") }}
+{{ examples.alert_box("Warning Alert Box", "warning") }}
+{{ examples.alert_box("Alert Box", "alert") }}
+
+<hr>
+
+{{ foundation.headers.h3("Forms") }}
+{{ foundation.headers.h3("Navigation") }}
+
+{% endblock %}

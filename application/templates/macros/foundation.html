@@ -1,0 +1,21 @@
+{# NOTE: you must do this `set` if you want nested macros #}
+{% import "macros/foundation/headers.html" as _headers %}
+{% set headers = _headers %}
+
+{% macro panel(title) -%}
+	<div class="panel" data-equalizer-watch>
+		<h3>{{ title }}</h3>
+		{{ caller() }}
+	</div>
+{%- endmacro %}
+
+{% macro button(link, text, extra=None) -%}
+  <a href="{{ link }}" class="button{% if extra %} {{ extra }}{% endif %}">{{ text }}</a>
+{%- endmacro %}
+
+{% macro alert_box(extra=None, close=True) -%}
+<div data-alert class="alert-box{% if extra %} {{ extra }}{% endif %}">
+	{{ caller() }}
+	{% if close %}<a href="#" class="close">&times;</a>{% endif %}
+</div>
+{%- endmacro %}

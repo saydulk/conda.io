@@ -1,0 +1,57 @@
+{% import "macros/code.html"  as code %}
+{% import "macros/foundation.html"  as foundation %}
+
+{# Note: this spacing for so <pre><code> blocks are rendered properly #}
+{% macro grid(classes, example_class=True) -%}
+<div class="row{% if example_class %} grid-examples{% endif %}">
+{% for class in classes %}  <div class="{{ class }} columns">.{{ class }} .columns</div>
+{% endfor %}</div>
+{%- endmacro %}
+
+
+{% macro grid_with_code(classes) -%}
+  {% call code.block("html") %}
+    {{ grid(classes, example_class=False )}}
+  {% endcall %}
+  {{ grid(classes) }}
+{%- endmacro %}
+
+
+{% macro code_row(html) -%}
+  <tr>
+    <td>{% call code.block("html") %}{{ html }}{% endcall %}</td>
+    <td style="min-width: 150px;">{{ html }}</td>
+  </tr>
+{%- endmacro %}
+
+{% macro code_table() -%}
+<table>
+  <thead>
+    <th>Code</th>
+    <th>Rendered</th>
+  </thead>
+
+  <tbody>
+    {{ caller() }}
+  </tbody>
+</table>
+{%- endmacro %}
+
+
+{% macro alert_box(text, extra=None) -%}
+<div class="row">
+  <div class="columns large-6">
+    {% call code.block("html") %}
+<div data-alert class="alert-box{% if extra %} {{ extra }}{% endif %}">
+  {{ text }}
+  <!-- leave off for no close option -->
+  <a href="#" class="close">&times;</a>
+</div>
+    {% endcall %}
+  </div>
+  <div class="columns large-6">
+    {% call foundation.alert_box(extra) %}{{ text }}{% endcall %}
+    {% call foundation.alert_box(extra, close=False) %}{{ text }} - no close{% endcall %}
+  </div>
+</div>
+{%- endmacro %}

@@ -1,0 +1,11 @@
+h3 {
+  &:hover {
+    small.anchor {
+      color: #999;
+      display: inline;
+    }
+  }
+  small.anchor {
+    display: none;
+  }
+}

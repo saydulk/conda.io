@@ -1,0 +1,25 @@
+@mixin create_font_face($name, $path, $filename) {
+  @font-face {
+    font-family: $name;
+    src: url("../fonts/#{$path}/#{$filename}\-webfont.eot");
+    src: url("../fonts/#{$path}/#{$filename}\-webfont.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/#{$path}/#{$filename}\-webfont.woff") format("woff"),
+         url("../fonts/#{$path}/#{$filename}\-webfont.ttf") format("truetype"),
+         url("../fonts/#{$path}/#{$filename}\-webfont.svg#open_sanssemibold_italic") format("svg");
+    font-weight: normal;
+    font-style: normal;
+
+  }
+}
+
+@include create_font_face("opensans-bold", "opensans/bold", "OpenSans-Bold");
+@include create_font_face("opensans-bold-italic", "opensans/bolditalic", "OpenSans-BoldItalic");
+@include create_font_face("opensans-extrabold", "opensans/extrabold", "OpenSans-ExtraBold");
+@include create_font_face("opensans-extrabold-italic", "opensans/extrabolditalic", "OpenSans-ExtraBoldItalic");
+@include create_font_face("opensans-italic", "opensans/italic", "OpenSans-Italic");
+@include create_font_face("opensans-light", "opensans/light", "OpenSans-Light");
+@include create_font_face("opensans-light-italic", "opensans/lightitalic", "OpenSans-LightItalic");
+@include create_font_face("opensans-extrabold", "opensans/extrabold", "OpenSans-ExtraBold");
+@include create_font_face("opensans-regular", "opensans/regular", "OpenSans-Regular");
+@include create_font_face("opensans-semibold-italic", "opensans/semibolditalic", "OpenSans-SemiboldItalic");
+@include create_font_face("opensans-semibold", "opensans/semibold", "OpenSans-Semibold");

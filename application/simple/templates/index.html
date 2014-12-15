@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% import "macros/foundation.html" as foundation %}
+
+{% block title %}Interactive Style Guide | {{ super() }}{% endblock %}
+
+{% block content %}
+
+  <div class="row" style="margin-top: 20px;">
+
+    <div class="large-12 columns">
+
+      <h1>Continuum's Style Guide</h1>
+
+      <p>
+        Welcome to <a href="http://www.continuum.io/">Continuum's</a>
+        style guide.  This outlines how to use Continuum's internal styling
+        for your demo or web application.
+      </p>
+
+      <div class="row callouts" data-equalizer>
+        <div class="small-1 large-4 columns">
+          {% call foundation.panel("Static Sites") %}
+            <p>
+              You can use this scaffolding to build a static site that can be
+              hosted anywhere.  <a href="#TODO">This section</a> shows you how
+              and introduces you to <a href="http://pages.github.com/">GitHub Pages</a>
+              hosting and the commands built-in to this skeleton that make hosting
+              there a breeze!
+            </p>
+
+            <p class="right call-to-action">
+              <a href="{{ url_for('.index', page="static" ) }}">&raquo; Learn More</a>
+            </p>
+
+            <br> {# TODO: fix with CSS #}
+          {% endcall %}
+        </div>
+
+        <div class="small-1 large-4 columns">
+          {% call foundation.panel("Build a Flask App") %}
+            <p>
+              This entire style guide is built on top of <a href="http://flask.pocoo.org">Flask</a>
+              and you can use it as the base to build your custom Flask applications
+              on top of.  <a href="#TODO">This section</a> shows you how to do that.
+            </p>
+
+            <p class="right call-to-action">
+              <a href="#TODO">&raquo; Learn More</a>
+            </p>
+
+            <br> {# TODO: fix with CSS #}
+          {% endcall %}
+        </div>
+
+        <div class="small-1 large-4 columns">
+          {% call foundation.panel("Using Foundation" ) %}
+            <p>
+              <a href="{{ url_for('.index', page='foundation') }}">This section</a> details what you need to know to deal with the
+              <a href="http://foundation.zurb.com/">Foundation Framework</a>.
+            </p>
+
+            <p class="right call-to-action">
+              <a href="{{ url_for('.index', page='foundation') }}">&raquo; Learn More</a>
+            </p>
+
+            <br> {# TODO: fix with CSS #}
+          {% endcall %}
+        </div>
+
+      </div>
+    </div>
+  </div>
+{% endblock %}

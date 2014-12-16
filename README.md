@@ -7,10 +7,9 @@ Skeleton site for generating a Flask or static website
 ### Quick Start
 
 ```bash
-conda env create -n design --file environment.yml
+conda env create
 # or if you don't have conda-env installed
-conda create -c javascript -n design "python<3" flask bower gulp
-source activate design
+source activate conda.io
 npm install
 bower install
 gulp

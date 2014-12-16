@@ -3,7 +3,7 @@
 #   conda env create -n design --file=environment.yml
 #
 # [1]: https://github.com/conda/conda-env/
-name: design
+name: conda.io
 channels:
   - javascript
   - continuumio

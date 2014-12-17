@@ -1,70 +1,74 @@
-{% extends "base.html" %}
+{% extends "layouts/hero.html" %}
 {% import "macros/foundation.html" as foundation %}
+{% import "macros/code.html" as code %}
 
-{% block title %}Interactive Style Guide | {{ super() }}{% endblock %}
+{% block title %}Conda - The Cross Platform Package Manager{% endblock %}
+
+{% block navigation_container %}{% endblock %}
+
+{% block hero %}
+  <div class="row">
+    <div class="large-12 columns">
+      <h1>
+        Conda
+        <small>The cross platform package manager</small>
+      </h1>
+    </div>
+  </div>
+
+{% endblock %}
 
 {% block content %}
-
   <div class="row" style="margin-top: 20px;">
 
     <div class="large-12 columns">
 
-      <h1>Continuum's Style Guide</h1>
+      <div class="row">
+        <div class="introduction columns large-12">
+          <p>
+            Conda is a cross-platform tool for managing packages and
+            environments.
+          <p>
 
-      <p>
-        Welcome to <a href="http://www.continuum.io/">Continuum's</a>
-        style guide.  This outlines how to use Continuum's internal styling
-        for your demo or web application.
-      </p>
+          <p>
+            Packages are libraries, tools, scripts, and configuration that
+            provide functionality.  These can be <em>anything</em> that you
+            need to share: from Node.js to numpy to different versions of
+            Python.
+          </p>
 
-      <div class="row callouts" data-equalizer>
-        <div class="small-1 large-4 columns">
-          {% call foundation.panel("Static Sites") %}
-            <p>
-              You can use this scaffolding to build a static site that can be
-              hosted anywhere.  <a href="#TODO">This section</a> shows you how
-              and introduces you to <a href="http://pages.github.com/">GitHub Pages</a>
-              hosting and the commands built-in to this skeleton that make hosting
-              there a breeze!
-            </p>
+          <p>
+            Environments are collections of packages that interact with each
+            other to provide a context to execute your code.  Both packages –
+            the loose pieces – and environments – the collected loose pieces –
+            can be packaged and shared across all three major operating
+            systems.
+          </p>
 
-            <p class="right call-to-action">
-              <a href="{{ url_for('.index', page="static" ) }}">&raquo; Learn More</a>
-            </p>
+        </div>
+      </div>
 
-            <br> {# TODO: fix with CSS #}
+      <div class="row getting-started" data-equalizer>
+        <div class="small-1 large-6 columns">
+          <h2>Already have Python?</h2>
+
+          {% call code.block("bash") %}
+$ pip install conda
+$ conda init
+$ conda create --name work "python&lt;3"
+$ source activate work
           {% endcall %}
+
         </div>
 
-        <div class="small-1 large-4 columns">
-          {% call foundation.panel("Build a Flask App") %}
-            <p>
-              This entire style guide is built on top of <a href="http://flask.pocoo.org">Flask</a>
-              and you can use it as the base to build your custom Flask applications
-              on top of.  <a href="#TODO">This section</a> shows you how to do that.
-            </p>
+        <div class="small-1 large-6 columns">
+          <h2>New to Python?</h2>
 
-            <p class="right call-to-action">
-              <a href="#TODO">&raquo; Learn More</a>
-            </p>
+          <p>
+            Download the latest <a href="#TODO">Miniconda</a> and run
+            the self-extracting installer.
+          </p>
 
-            <br> {# TODO: fix with CSS #}
-          {% endcall %}
-        </div>
-
-        <div class="small-1 large-4 columns">
-          {% call foundation.panel("Using Foundation" ) %}
-            <p>
-              <a href="{{ url_for('.index', page='foundation') }}">This section</a> details what you need to know to deal with the
-              <a href="http://foundation.zurb.com/">Foundation Framework</a>.
-            </p>
-
-            <p class="right call-to-action">
-              <a href="{{ url_for('.index', page='foundation') }}">&raquo; Learn More</a>
-            </p>
-
-            <br> {# TODO: fix with CSS #}
-          {% endcall %}
         </div>
 
       </div>

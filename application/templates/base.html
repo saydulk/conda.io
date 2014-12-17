@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- If you delete this meta tag World War Z will become a reality -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% block title %}Continuum Analytics{% endblock %}</title>
+  <title>{% block title %}Conda{% endblock %}</title>
 
   <link rel="stylesheet" href="{{ static('css/app.css') }}">
   <link rel="stylesheet" href="{{ static('bower_components/rainbow/themes/twilight.css') }}">
@@ -16,16 +16,15 @@
 </head>
 <body>
   {% block navigation_container %}
-    <div class="row header">
-      <div class="large-12 columns navigation">
-        <ul class="button-group right">
-          <li><a href="#" class="button">Products</a></li>
-          <li><a href="#" class="button">Consulting</a></li>
-          <li><a href="#" class="button">Training</a></li>
-          <li><a href="#" class="button">Contact Us</a></li>
-        </ul>
-      </div>
-    </div>
+    <nav class="top-bar" data-topbar role="navigation">
+      <ul class="title-area">
+        {% block branding %}
+          <li class="name">
+            <h1><a href="">Conda</a></h1>
+          </li>
+        {% endblock %}
+      </ul>
+    </nav>
   {% endblock %}
 
   {% block main_container %}

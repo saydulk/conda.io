@@ -22,3 +22,35 @@ code[data-language] {
   background: transparent;
   border: 0;
 }
+
+
+.hero {
+  background-color: darken($continuum-green, 15%);
+  height: 300px;
+  position: relative;
+
+  h1 {
+    color: white;
+    font-size: $h1-font-size * 1.5;
+    margin-top: $h1-font-size * 2.25;
+
+    small {
+      margin-top: .25em;
+      color: darken(white, 15%);
+      display: block; }
+  }
+}
+
+.introduction {
+  p {
+    &:first-child { font-size: $paragraph-font-size * 1.5; }
+  }
+}
+
+.getting-started {
+  .columns:first-child {
+    border-right: 1px solid darken(white, 20%);
+  }
+}
+
+code.rainbow { padding: 0; }

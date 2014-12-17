@@ -6,17 +6,19 @@ $continuum-green-light: #84bd71; // saturation * .5, brightness * golden ratio
 
 
 // over ride any Foundation settings here
-$primary-color: $continuum-blue;
+$primary-color: $continuum-green;
 $warning-color: #f2bd83;
 $info-color: #b7cbdd;
 $alert-color: #bd3939;
 $success-color: #5abd39;
 
 $header-font-family: "opensans-semibold";
-$header-font-color: $continuum-blue;
+$header-font-color: $continuum-green;
 
 $paragraph-font-family: "opensans-regular";
 
-$anchor-font-color: $continuum-blue-light;
+$anchor-font-color: $continuum-green-light;
 a { font-family: "opensans-semibold"; }
 
+
+$topbar-bg-color: darken($continuum-green, 5%);

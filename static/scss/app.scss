@@ -52,16 +52,30 @@ code.rainbow { padding: 0; }
 
 
 .introduction {
-  p {
-    &:first-child { font-size: $paragraph-font-size * 1.5; text-align: center; }
+  > p {
+    &:first-child { font-size: $paragraph-font-size * 1.5; }
   }
   margin-bottom: $h1-font-size;
 
-  .icons {
-    text-align: center;
+  ul > li {
+    margin-bottom: 10px;
+    span { padding-left: $paragraph-font-size / 2; }
   }
+
   .fa {
-    font-size: $paragraph-font-size * 3;
-    color: lighten(#222, 33%);
+    font-size: $paragraph-font-size * 1.5;
+    color: lighten(#222, 50%);
+  }
+
+  .environments {
+    p {
+      text-align: left;
+      margin-top: $paragraph-font-size * 0.75;
+    }
+
+    .text {
+      margin-top: 17px;
+      p { text-align: center; }
+    }
   }
 }

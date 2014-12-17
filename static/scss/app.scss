@@ -41,11 +41,6 @@ code[data-language] {
   }
 }
 
-.introduction {
-  p {
-    &:first-child { font-size: $paragraph-font-size * 1.5; }
-  }
-}
 
 .getting-started {
   .columns:first-child {
@@ -54,3 +49,19 @@ code[data-language] {
 }
 
 code.rainbow { padding: 0; }
+
+
+.introduction {
+  p {
+    &:first-child { font-size: $paragraph-font-size * 1.5; text-align: center; }
+  }
+  margin-bottom: $h1-font-size;
+
+  .icons {
+    text-align: center;
+  }
+  .fa {
+    font-size: $paragraph-font-size * 3;
+    color: lighten(#222, 33%);
+  }
+}

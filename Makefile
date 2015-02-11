@@ -18,3 +18,4 @@ gh-pages:
 	git commit -m "Generated gh-pages for `git log master -1 --pretty=short --abbrev-commit`" \
 	&& git push conda gh-pages \
 	; git checkout master
+	rm -rf static/bower_components/  # final thing artifact that needs clearing

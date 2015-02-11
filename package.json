@@ -1,5 +1,8 @@
 {
-  "description": "Continuum Styles",
+  "name": "conda.io",
+  "private": true,
+  "repository": "git://github.com/conda/conda.io.git",
+  "description": "conda.io source",
   "browser": {},
   "browserify": {
     "transform": [

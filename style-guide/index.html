@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" >
+
+<head>
+  <meta charset="utf-8">
+  <!-- If you delete this meta tag World War Z will become a reality -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conda</title>
+
+  <link rel="stylesheet" href="/static/css/app.css">
+  <link rel="stylesheet" href="/static/bower_components/rainbow/themes/twilight.css">
+
+    <script src="/static/bower_components/modernizr/modernizr.js"></script>
+
+</head>
+<body>
+  
+    <nav class="top-bar" data-topbar role="navigation">
+      <ul class="title-area">
+        
+          <li class="name">
+            <h1><a href="">Conda</a></h1>
+          </li>
+        
+      </ul>
+    </nav>
+  
+
+  
+    
+      <div class="row">
+        <div class="large columns">
+          
+
+<h2>Foundation Kitchen Sink</h2>
+
+<p>
+  This file showcases most of the styles that
+  <a href="http://foundation.zurb.com/">Foundation</a> provides
+  and demonstrates many of the <a href="http://jinja.pocoo.org/docs/dev/">Jinja2</a>
+  <a href="http://jinja.pocoo.org/docs/dev/templates/#macros">macros</a>
+  that are available.
+</p>
+
+<p>
+  For full documentation of all of Foundation's features, please review
+  the <a href="http://foundation.zurb.com/docs/">Foundation Docs</a>.
+</p>
+
+<hr>
+
+
+
+
+
+<h3>
+    <a id="grid"
+       href="#grid">
+      Grid
+      <small class="anchor">#</small>
+    </a>
+  </h3>
+
+<p>
+  Grids provide a layout mechanism for organizing content into a grid.
+  Foundation's
+  <a href="http://foundation.zurb.com/docs/components/grid.html">built-in grid</a>
+  allows for a large amount of flexibility, but for consistency, it's best to
+  use one of the following grids.
+</p>
+
+
+<h4>
+    <a id="3-9-grid"
+       href="#3-9-grid">
+      3 / 9 Grid
+      <small class="anchor">#</small>
+    </a>
+  </h4>
+
+<p>
+  Use this grid when you need to mimic the side-bar + main content.
+</p>
+
+<pre data-codeblock><code data-language="html"><div class="row">
+  <div class="large-3 columns">.large-3 .columns</div>
+  <div class="large-9 columns">.large-9 .columns</div>
+</div></code></pre>
+  <div class="row grid-examples">
+  <div class="large-3 columns">.large-3 .columns</div>
+  <div class="large-9 columns">.large-9 .columns</div>
+</div>
+
+
+<h4>
+    <a id="3-6-3-grid"
+       href="#3-6-3-grid">
+      3 / 6 / 3 Grid
+      <small class="anchor">#</small>
+    </a>
+  </h4>
+
+<p>
+  Use this grid when you need to have side-bars on each side plus
+  main content in the middle.
+</p>
+
+<pre data-codeblock><code data-language="html"><div class="row">
+  <div class="large-3 columns">.large-3 .columns</div>
+  <div class="large-6 columns">.large-6 .columns</div>
+  <div class="large-3 columns">.large-3 .columns</div>
+</div></code></pre>
+  <div class="row grid-examples">
+  <div class="large-3 columns">.large-3 .columns</div>
+  <div class="large-6 columns">.large-6 .columns</div>
+  <div class="large-3 columns">.large-3 .columns</div>
+</div>
+
+
+<h4>
+    <a id="other-grids"
+       href="#other-grids">
+      Other Grids
+      <small class="anchor">#</small>
+    </a>
+  </h4>
+
+<p>
+  Below are a collection of other grids that you can use.  Be sparing in their
+  use.  They're provided here for flexibility, but should not be used
+  sporadically.  The key to a good grid-based layout is consistency.  Don't
+  switch between different layouts on different pages without good reason.
+</p>
+
+
+<div class="row grid-examples">
+  <div class="large-2 columns">.large-2 .columns</div>
+  <div class="large-10 columns">.large-10 .columns</div>
+</div>
+<div class="row grid-examples">
+  <div class="large-4 columns">.large-4 .columns</div>
+  <div class="large-8 columns">.large-8 .columns</div>
+</div>
+<div class="row grid-examples">
+  <div class="large-6 columns">.large-6 .columns</div>
+  <div class="large-6 columns">.large-6 .columns</div>
+</div>
+<div class="row grid-examples">
+  <div class="large-8 columns">.large-8 .columns</div>
+  <div class="large-4 columns">.large-4 .columns</div>
+</div>
+<div class="row grid-examples">
+  <div class="large-10 columns">.large-10 .columns</div>
+  <div class="large-2 columns">.large-2 .columns</div>
+</div>
+
+<hr>
+
+<h3>
+    <a id="buttons"
+       href="#buttons">
+      Buttons
+      <small class="anchor">#</small>
+    </a>
+  </h3>
+
+
+
+
+<p>
+  Buttons are a key means of interacting with any application,
+  whether for downloading the latest version or confirming that
+  you want to continue.  Below are the various buttons that are
+  available.
+</p>
+
+<p>
+  You should use the <em>default</em> button style for all buttons
+  that are not a primary action.  Buttons that denote a positive
+  action (creation, save, confirmation, and so on) should use the
+  <code>success</code> class while buttons that denote a destructive
+  action (trash, removal, and so on) should use <code>alert</code>.
+</p>
+
+<h4>
+    <a id="button-sizes"
+       href="#button-sizes">
+      Button Sizes
+      <small class="anchor">#</small>
+    </a>
+  </h4>
+<p>
+  You should always default to using the default style.
+</p>
+
+<pre data-codeblock><code data-language="html"><a href="#" class="button">
+  Some Action
+</a></code></pre>
+
+<a href="#" class="button">Some Action</a>
+
+<p>
+  There are other sizes available for use when the design explicitly
+  calls for it.  Button sizes should be used consistently throughout
+  a site for the role that the button is in use for.
+</p>
+
+<div data-alert class="alert-box warning">
+	
+  <p><strong>Don't Mix Sizes!</strong></p>
+  <p>
+    You should <em>never</em> user multiple size buttons to indicate
+    which action the user should take.
+  </p>
+
+  <div>
+    <a href="#" class="button tiny">Cancel</a>
+    <a href="#" class="button large">Continue</a>
+  </div>
+
+	
+</div>
+
+
+<p>
+  The following sizes are available:
+</p>
+
+<table>
+  <thead>
+    <th>Code</th>
+    <th>Rendered</th>
+  </thead>
+
+  <tbody>
+    
+  <tr>
+    <td><pre data-codeblock><code data-language="html"><a href="#" class="button tiny">Tiny</a></code></pre></td>
+    <td style="min-width: 150px;"><a href="#" class="button tiny">Tiny</a></td>
+  </tr>
+  <tr>
+    <td><pre data-codeblock><code data-language="html"><a href="#" class="button small">Small</a></code></pre></td>
+    <td style="min-width: 150px;"><a href="#" class="button small">Small</a></td>
+  </tr>
+  <tr>
+    <td><pre data-codeblock><code data-language="html"><a href="#" class="button">Default</a></code></pre></td>
+    <td style="min-width: 150px;"><a href="#" class="button">Default</a></td>
+  </tr>
+  <tr>
+    <td><pre data-codeblock><code data-language="html"><a href="#" class="button large">Large</a></code></pre></td>
+    <td style="min-width: 150px;"><a href="#" class="button large">Large</a></td>
+  </tr>
+
+  </tbody>
+</table>
+
+
+<h4>
+    <a id="colors"
+       href="#colors">
+      Colors
+      <small class="anchor">#</small>
+    </a>
+  </h4>
+
+<p>
+  Consistent color use plays an important role in guiding the user's actions
+  to ensure they're able to successfully navigate your site or application.
+</p>
+
+<div data-alert class="alert-box info">
+	
+  When in doubt, use default.
+
+	
+</div>
+
+
+<p>
+  You should use the default button color for <em>most</em> actions.  Where
+  two or more actions are available, style the primary action with the default
+  behavior, and add the <code>secondary</code> class to all other actions.
+</p>
+
+<p>
+  You should only use <code>success</code> for final actions that are positive
+  such as finishing an account creation, signing up for a mailing list, or
+  downloading software.  The user should not have to click another button or
+  link to finish an action after clicking on a <code>success</code> button.
+</p>
+
+<p>
+  Likewise, you should only use <code>alert</code> for actions that are
+  considered destructive such as deleting an account.
+</p>
+
+
+<table>
+  <thead>
+    <th>Code</th>
+    <th>Rendered</th>
+  </thead>
+
+  <tbody>
+    
+  <tr>
+    <td><pre data-codeblock><code data-language="html"><a href="#" class="button">Primary</a></code></pre></td>
+    <td style="min-width: 150px;"><a href="#" class="button">Primary</a></td>
+  </tr>
+  <tr>
+    <td><pre data-codeblock><code data-language="html"><a href="#" class="button secondary">Secondary</a></code></pre></td>
+    <td style="min-width: 150px;"><a href="#" class="button secondary">Secondary</a></td>
+  </tr>
+  <tr>
+    <td><pre data-codeblock><code data-language="html"><a href="#" class="button success">Success</a></code></pre></td>
+    <td style="min-width: 150px;"><a href="#" class="button success">Success</a></td>
+  </tr>
+  <tr>
+    <td><pre data-codeblock><code data-language="html"><a href="#" class="button alert">Alert</a></code></pre></td>
+    <td style="min-width: 150px;"><a href="#" class="button alert">Alert</a></td>
+  </tr>
+
+  </tbody>
+</table>
+
+<h4>
+    <a id="rounded-/-radius"
+       href="#rounded-/-radius">
+      Rounded / Radius
+      <small class="anchor">#</small>
+    </a>
+  </h4>
+<p>
+  These buttons can be combined with other styles.  The Continuum style does
+  <em>not</em> use rounded or radius buttons, but client projects might call
+  for them.  When in doubt, leave them off.
+</p>
+
+<div>
+<table>
+  <thead>
+    <th>Code</th>
+    <th>Rendered</th>
+  </thead>
+
+  <tbody>
+    
+  <tr>
+    <td><pre data-codeblock><code data-language="html"><a href="#" class="button radius">Primary</a></code></pre></td>
+    <td style="min-width: 150px;"><a href="#" class="button radius">Primary</a></td>
+  </tr>
+  <tr>
+    <td><pre data-codeblock><code data-language="html"><a href="#" class="button radius secondary">Secondary</a></code></pre></td>
+    <td style="min-width: 150px;"><a href="#" class="button radius secondary">Secondary</a></td>
+  </tr>
+  <tr>
+    <td><pre data-codeblock><code data-language="html"><a href="#" class="button radius alert">Alert</a></code></pre></td>
+    <td style="min-width: 150px;"><a href="#" class="button radius alert">Alert</a></td>
+  </tr>
+  <tr>
+    <td><pre data-codeblock><code data-language="html"><a href="#" class="button radius success">Success</a></code></pre></td>
+    <td style="min-width: 150px;"><a href="#" class="button radius success">Success</a></td>
+  </tr>
+
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <th>Code</th>
+    <th>Rendered</th>
+  </thead>
+
+  <tbody>
+    
+  <tr>
+    <td><pre data-codeblock><code data-language="html"><a href="#" class="button round">Primary</a></code></pre></td>
+    <td style="min-width: 150px;"><a href="#" class="button round">Primary</a></td>
+  </tr>
+  <tr>
+    <td><pre data-codeblock><code data-language="html"><a href="#" class="button round secondary">Secondary</a></code></pre></td>
+    <td style="min-width: 150px;"><a href="#" class="button round secondary">Secondary</a></td>
+  </tr>
+  <tr>
+    <td><pre data-codeblock><code data-language="html"><a href="#" class="button round alert">Alert</a></code></pre></td>
+    <td style="min-width: 150px;"><a href="#" class="button round alert">Alert</a></td>
+  </tr>
+  <tr>
+    <td><pre data-codeblock><code data-language="html"><a href="#" class="button round success">Success</a></code></pre></td>
+    <td style="min-width: 150px;"><a href="#" class="button round success">Success</a></td>
+  </tr>
+
+  </tbody>
+</table>
+
+<h4>
+    <a id="disabled"
+       href="#disabled">
+      Disabled
+      <small class="anchor">#</small>
+    </a>
+  </h4>
+<p>
+  This button can be combined with other button styles to show it as disabled.
+  You should use this whenever a button <em>can</em> be enabled after some
+  other action is taken by the user.
+</p>
+
+<table>
+  <thead>
+    <th>Code</th>
+    <th>Rendered</th>
+  </thead>
+
+  <tbody>
+    
+  <tr>
+    <td><pre data-codeblock><code data-language="html"><a href="#" class="button disabled">Primary</a></code></pre></td>
+    <td style="min-width: 150px;"><a href="#" class="button disabled">Primary</a></td>
+  </tr>
+  <tr>
+    <td><pre data-codeblock><code data-language="html"><a href="#" class="button secondary disabled">Secondary</a></code></pre></td>
+    <td style="min-width: 150px;"><a href="#" class="button secondary disabled">Secondary</a></td>
+  </tr>
+  <tr>
+    <td><pre data-codeblock><code data-language="html"><a href="#" class="button success disabled">Success</a></code></pre></td>
+    <td style="min-width: 150px;"><a href="#" class="button success disabled">Success</a></td>
+  </tr>
+  <tr>
+    <td><pre data-codeblock><code data-language="html"><a href="#" class="button alert disabled">Alert</a></code></pre></td>
+    <td style="min-width: 150px;"><a href="#" class="button alert disabled">Alert</a></td>
+  </tr>
+
+  </tbody>
+</table>
+
+
+<h4>
+    <a id="expanded-buttons"
+       href="#expanded-buttons">
+      Expanded Buttons
+      <small class="anchor">#</small>
+    </a>
+  </h4>
+<p>
+  Add <code>expand</code> to any button that you want to take up the entire
+  space that it is alotted.  This is particularlly useful when dealing with
+  buttons in the mobile space.
+</p>
+
+<table>
+  <thead>
+    <th>Code</th>
+    <th>Rendered</th>
+  </thead>
+
+  <tbody>
+    
+  <tr>
+    <td><pre data-codeblock><code data-language="html"><a href="#" class="button expand">Primary</a></code></pre></td>
+    <td style="min-width: 150px;"><a href="#" class="button expand">Primary</a></td>
+  </tr>
+  <tr>
+    <td><pre data-codeblock><code data-language="html"><a href="#" class="button secondary expand">Secondary</a></code></pre></td>
+    <td style="min-width: 150px;"><a href="#" class="button secondary expand">Secondary</a></td>
+  </tr>
+  <tr>
+    <td><pre data-codeblock><code data-language="html"><a href="#" class="button success expand">Success</a></code></pre></td>
+    <td style="min-width: 150px;"><a href="#" class="button success expand">Success</a></td>
+  </tr>
+  <tr>
+    <td><pre data-codeblock><code data-language="html"><a href="#" class="button alert expand">Alert</a></code></pre></td>
+    <td style="min-width: 150px;"><a href="#" class="button alert expand">Alert</a></td>
+  </tr>
+
+  </tbody>
+</table>
+
+<p>
+  Here are some examples of buttons that use grids to limit their size.
+  Note that these are responsive by nature as their containers change size
+  on different devices.
+</p>
+
+<div class="row">
+  <div class="large-6 columns">
+    <a href="#" class="button expand secondary">Expanded Secondary</a>
+  </div>
+  <div class="large-6 columns">
+    <a href="#" class="button expand success">Expanded Success</a>
+  </div>
+</div>
+
+<div class="row">
+  <div class="large-4 columns">
+    <a href="#" class="button expand">Expanded</a>
+  </div>
+  <div class="large-4 columns">
+    <a href="#" class="button expand secondary">Expanded Secondary</a>
+  </div>
+  <div class="large-4 columns">
+    <a href="#" class="button expand success">Expanded Success</a>
+  </div>
+</div>
+
+<hr>
+<hr>
+
+<h3>
+    <a id="alerts"
+       href="#alerts">
+      Alerts
+      <small class="anchor">#</small>
+    </a>
+  </h3>
+
+<div class="row">
+  <div class="columns large-6">
+    <pre data-codeblock><code data-language="html"><div data-alert class="alert-box">
+  Standard Alert Box
+  <!-- leave off for no close option -->
+  <a href="#" class="close">&times;</a>
+</div></code></pre>
+  </div>
+  <div class="columns large-6">
+    <div data-alert class="alert-box">
+	Standard Alert Box
+	<a href="#" class="close">&times;</a>
+</div>
+    <div data-alert class="alert-box">
+	Standard Alert Box - no close
+	
+</div>
+  </div>
+</div>
+<div class="row">
+  <div class="columns large-6">
+    <pre data-codeblock><code data-language="html"><div data-alert class="alert-box secondary">
+  Secondary Alert Box
+  <!-- leave off for no close option -->
+  <a href="#" class="close">&times;</a>
+</div></code></pre>
+  </div>
+  <div class="columns large-6">
+    <div data-alert class="alert-box secondary">
+	Secondary Alert Box
+	<a href="#" class="close">&times;</a>
+</div>
+    <div data-alert class="alert-box secondary">
+	Secondary Alert Box - no close
+	
+</div>
+  </div>
+</div>
+<div class="row">
+  <div class="columns large-6">
+    <pre data-codeblock><code data-language="html"><div data-alert class="alert-box info">
+  Info Alert Box
+  <!-- leave off for no close option -->
+  <a href="#" class="close">&times;</a>
+</div></code></pre>
+  </div>
+  <div class="columns large-6">
+    <div data-alert class="alert-box info">
+	Info Alert Box
+	<a href="#" class="close">&times;</a>
+</div>
+    <div data-alert class="alert-box info">
+	Info Alert Box - no close
+	
+</div>
+  </div>
+</div>
+<div class="row">
+  <div class="columns large-6">
+    <pre data-codeblock><code data-language="html"><div data-alert class="alert-box success">
+  Success Alert Box
+  <!-- leave off for no close option -->
+  <a href="#" class="close">&times;</a>
+</div></code></pre>
+  </div>
+  <div class="columns large-6">
+    <div data-alert class="alert-box success">
+	Success Alert Box
+	<a href="#" class="close">&times;</a>
+</div>
+    <div data-alert class="alert-box success">
+	Success Alert Box - no close
+	
+</div>
+  </div>
+</div>
+<div class="row">
+  <div class="columns large-6">
+    <pre data-codeblock><code data-language="html"><div data-alert class="alert-box warning">
+  Warning Alert Box
+  <!-- leave off for no close option -->
+  <a href="#" class="close">&times;</a>
+</div></code></pre>
+  </div>
+  <div class="columns large-6">
+    <div data-alert class="alert-box warning">
+	Warning Alert Box
+	<a href="#" class="close">&times;</a>
+</div>
+    <div data-alert class="alert-box warning">
+	Warning Alert Box - no close
+	
+</div>
+  </div>
+</div>
+<div class="row">
+  <div class="columns large-6">
+    <pre data-codeblock><code data-language="html"><div data-alert class="alert-box alert">
+  Alert Box
+  <!-- leave off for no close option -->
+  <a href="#" class="close">&times;</a>
+</div></code></pre>
+  </div>
+  <div class="columns large-6">
+    <div data-alert class="alert-box alert">
+	Alert Box
+	<a href="#" class="close">&times;</a>
+</div>
+    <div data-alert class="alert-box alert">
+	Alert Box - no close
+	
+</div>
+  </div>
+</div>
+
+<hr>
+
+<h3>
+    <a id="forms"
+       href="#forms">
+      Forms
+      <small class="anchor">#</small>
+    </a>
+  </h3>
+<h3>
+    <a id="navigation"
+       href="#navigation">
+      Navigation
+      <small class="anchor">#</small>
+    </a>
+  </h3>
+
+
+        </div>
+      </div>
+    
+  
+
+
+  
+    <footer class="row">
+      <div class="large-12 columns">
+        <hr/>
+        <div class="row">
+          <div class="large-6 columns">
+            <p>© Continuum Analytics 2014 - 2015</p>
+          </div>
+
+          <div class="large-6 columns">
+            <ul class="inline-list right">
+              <li><a href="http://continuum.io">Continuum Analytics</a></li>
+              <li><a href="http://continuum.io/anaconda-server">Anaconda Server</a></li>
+              <li><a href="https://github.com/conda"><i class="fa fa-github"></i> GitHub</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+
+    <script src="/static/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/static/bower_components/foundation/js/foundation/foundation.js"></script>
+    <script src="/static/bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
+    <script src="/static/bower_components/rainbow/js/rainbow.min.js"></script>
+    <script src="/static/bower_components/rainbow/js/language/generic.js"></script>
+    <script src="/static/bower_components/rainbow/js/language/html.js"></script>
+    <script src="/static/bower_components/rainbow/js/language/python.js"></script>
+    <script src="/static/js/app.js"></script>
+  </body>
+</html>

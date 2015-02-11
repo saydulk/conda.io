@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" >
+
+<head>
+  <meta charset="utf-8">
+  <!-- If you delete this meta tag World War Z will become a reality -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conda - The Cross Platform Package Manager</title>
+
+  <link rel="stylesheet" href="/static/css/app.css">
+  <link rel="stylesheet" href="/static/bower_components/rainbow/themes/twilight.css">
+
+    <script src="/static/bower_components/modernizr/modernizr.js"></script>
+
+</head>
+<body>
+  
+
+  
+  
+    <div class="hero">
+     <div class="large columns">
+        
+  <div class="row">
+    <div class="medium-12 columns">
+      <h1>
+        Conda
+        <small><em>The cross platform package manager</em></small>
+      </h1>
+    </div>
+  </div>
+
+
+     </div>
+    </div>
+  
+
+  
+    
+      <div class="row">
+        <div class="large columns">
+          
+  <div class="row" style="margin-top: 20px;">
+
+    <div class="medium-12 columns">
+
+      <div class="row">
+        <div class="introduction columns medium-12">
+          <p>
+            Conda is the cross-platform tool for managing packages and
+            environments.
+          <p>
+
+          <h4>Packages</h4>
+
+          <div class="row">
+            <div class="columns medium-8">
+              <p>
+                Libraries, tools, scripts, and configuration that
+                provide functionality.  <em>Anything</em> that you
+                need to share: from Node.js to numpy to different versions of
+                Python.
+              </p>
+
+            </div>
+
+            <div class="columns medium-4">
+              <div class="row">
+                <div class="columns medium-6">
+                  <ul class="no-bullet">
+                    <li>
+                      <i class="fa fa-archive"></i><span>Python</span>
+                    </li>
+                    <li>
+                      <i class="fa fa-archive"></i><span>Numpy</span>
+                    </li>
+                    <li>
+                      <i class="fa fa-archive"></i><span>… many more</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="columns medium-6">
+                  <ul class="no-bullet">
+                    <li>
+                      <i class="fa fa-archive"></i><span>Requests</span>
+                    </li>
+                    <li>
+                      <i class="fa fa-archive"></i><span>Node.js</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <h4>Environments</h4>
+
+          <div class="row">
+            <div class="columns medium-8">
+              <p>
+                Collections of packages that interact with each other to provide a
+                context to execute your code.  Both packages – the loose pieces –
+                and environments – the collected loose pieces – can be packaged
+                and shared across all three major operating systems.
+              </p>
+            </div>
+
+            <div class="columns medium-4">
+              <div class="row">
+                <div class="column medium-6 center">
+                  <img src="/static/images/environment.png" width="66%">
+                </div>
+                <div class="column medium-6 center">
+                  <img src="/static/images/environment.png" width="66%">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row getting-started" data-equalizer>
+        <div class="small-1 medium-12 columns">
+
+        </div>
+
+
+        <div class="small-1 medium-6 columns">
+          <h2>Already have Python?</h2>
+
+          <p>
+            Conda is meant to be standalone to your existing operating system.
+            Rather than use Conda with that system, we <em>strongly</em>
+            recommend that you install with the
+            <a href="http://conda.pydata.org/miniconda.html#miniconda">Miniconda</a>
+            tool.
+          </p>
+
+        </div>
+
+        <div class="small-1 medium-6 columns">
+          <h2>New to Python?</h2>
+
+          <p>
+            Download the latest <a href="#TODO">Miniconda</a> and run
+            the self-extracting installer.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="medium-12 columns">
+          <h2>First Five Minutes with Conda</h2>
+
+          <p>
+            The first thing you need to do is create an environment.  These
+            hold all of the packages you install.
+          </p>
+
+          <pre data-codeblock><code data-language="bash">$ conda create --name dev python
+... output from conda ...</code></pre>
+
+          <p>
+            This creates a new environment called <em>dev</em> and installs the
+            <em>python</em> package into it.  You can name the envirornment
+            whatever you want but it must include a name.
+          </p>
+
+          <p>
+            Next you need to activate the environment so you can use it.  To do
+            that on OS X or Linux, type the following:
+          </p>
+
+          <pre data-codeblock><code data-language="bash">$ source activate dev
+... activation output ...
+(dev) $</code></pre>
+
+          <p>
+            On Windows, you don't have to include <code>source</code>:
+          </p>
+
+          <pre data-codeblock><code data-language="">$ activate dev
+... activate output ...
+[dev] $</code></pre>
+
+          <h2>Installing other packages</h2>
+
+          <p>
+            Now when you type <code>python</code> at the command line, you are
+            using a conda managed version of Python.  You can install other
+            packages into this environment with the <code>conda install</code>
+            package.  For example, let's install the <em>lxml</em> package:
+          </p>
+
+          <pre data-codeblock><code data-language="bash">(dev) $ conda install lxml</code></pre>
+
+          <p>
+            Now you can import the <code>lxml</code> module in any Python code
+            you run inside this environment.  You're not limited to just what
+            Conda can install, however.  You can also use Python's
+            <a href="https://pip.pypa.io/">pip</a> installer as well.
+          </p>
+
+          <p>
+            For example, this site is generated using the excellent
+            <a href="http://pythonhosted.org/Frozen-Flask/">Frozen-Flask</a>
+            module that's not available as a conda package.  To install it, you
+            must first install pip, then use pip to install the package.
+          </p>
+
+          <pre data-codeblock><code data-language="bash">(dev) $ conda install pip
+... output from conda install ...
+(dev) $ pip install Frozen-Flask
+... output from pip install ...</code></pre>
+
+          <div class="row">
+            <div class="columns medium-10 medium-offset-1">
+              <div data-alert class="alert-box info">
+	
+                <em>Note on pip</em>: Conda environments replace
+                virtualenv so there's no need to activate a virtualenv before
+                using pip.  Always make sure that you've installed pip into
+                your conda environment and are <em>not</em> using your system
+                pip.
+              
+	
+</div>
+            </div>
+          </div>
+
+          <h2>Sharing your environment</h2>
+
+          <p>
+            Conda allows you to specify how you built your environment using
+            the <code>conda env</code> command.  You can export an existing
+            environment and all of its packages like this:
+          </p>
+
+          <pre data-codeblock><code data-language="bash">(dev) $ conda env export > environment.yml</code></pre>
+
+          <p>
+            <code>environment.yml</code> is the convention for an environment
+            file within conda.  Your version numbers will differ slightly, but
+            your file should look something like this:
+          </p>
+
+          <pre data-codeblock><code data-language="yaml">name: dev
+dependencies:
+- libxml2=2.9.0=1
+- libxslt=1.1.28=2
+- lxml=3.4.1=py34_0
+- openssl=1.0.1k=0
+- pip=6.0.6=py34_0
+- python=3.4.2=0
+- readline=6.2=2
+- setuptools=12.0.5=py34_0
+- sqlite=3.8.4.1=0
+- tk=8.5.15=0
+- xz=5.0.5=0
+- zlib=1.2.8=0
+- pip:
+  - flask==0.10.1
+  - frozen-flask==0.11
+  - itsdangerous==0.24
+  - jinja2==2.7.3
+  - markupsafe==0.23
+  - werkzeug==0.10.1</code></pre>
+
+          <p>
+            By default, <code>conda env export</code> includes all of the
+            packages that are installed into your environment and the specific
+            versions that are installed.  Note the line toward the bottom of
+            the <code>dependencies</code> list: <code>- pip:</code>.  That's a
+            nested list that allows you to specify pip packages you need
+            installed in your environment as well.
+          </p>
+
+          <p>
+            You can give this file to another developer and they can create an
+            environment using it.  Let's try doing it ourselves by removing the
+            environment that we've created and recreating it.
+          </p>
+
+          <p>
+            First, start by deactivating the environment so we can remove it,
+            then remove it:
+          </p>
+
+          <pre data-codeblock><code data-language="bash">(dev) $ source deactivate
+$ conda env remove --name dev
+... output from conda env remove ...</code></pre>
+
+          <p>
+            Once the environment is removed, run this command from inside the
+            same directory as your <code>environment.yml</code> file:
+          </p>
+
+          <pre data-codeblock><code data-language="bash">}
+$ conda env create
+... output from conda env create ...
+$ source activate dev
+... output from activation ...
+(dev) $</code></pre>
+
+          <p>
+            You can verify everything was installed correctly by looking at the
+            output of <code>conda list</code> inside the activated environment.
+          </p>
+
+          <h2>Next steps…</h2>
+
+          <p>
+            Check out <a href="http://conda.pydata.org/docs/">documentation</a>
+            and take a look at <a href="http://conda.pydata.org/docs/build_tutorials/pkgs.html">how
+            to build your own conda packages</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+      </div>
+    
+  
+
+
+
+  
+    <footer class="row">
+      <div class="large-12 columns">
+        <hr/>
+        <div class="row">
+          <div class="large-6 columns">
+            <p>© Continuum Analytics 2014 - 2015</p>
+          </div>
+
+          <div class="large-6 columns">
+            <ul class="inline-list right">
+              <li><a href="http://continuum.io">Continuum Analytics</a></li>
+              <li><a href="http://continuum.io/anaconda-server">Anaconda Server</a></li>
+              <li><a href="https://github.com/conda"><i class="fa fa-github"></i> GitHub</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+
+    <script src="/static/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/static/bower_components/foundation/js/foundation/foundation.js"></script>
+    <script src="/static/bower_components/foundation/js/foundation/foundation.equalizer.js"></script>
+    <script src="/static/bower_components/rainbow/js/rainbow.min.js"></script>
+    <script src="/static/bower_components/rainbow/js/language/generic.js"></script>
+    <script src="/static/bower_components/rainbow/js/language/html.js"></script>
+    <script src="/static/bower_components/rainbow/js/language/python.js"></script>
+    <script src="/static/js/app.js"></script>
+  </body>
+</html>

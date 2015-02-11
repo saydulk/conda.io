@@ -13,3 +13,4 @@ dependencies:
   - bower
   - gulp
   - continuum-flask
+  - nodejs

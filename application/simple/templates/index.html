@@ -8,10 +8,10 @@
 
 {% block hero %}
   <div class="row">
-    <div class="large-12 columns">
+    <div class="medium-12 columns">
       <h1>
         Conda
-        <small>The cross platform package manager</small>
+        <small><em>The cross platform package manager</em></small>
       </h1>
     </div>
   </div>
@@ -21,10 +21,10 @@
 {% block content %}
   <div class="row" style="margin-top: 20px;">
 
-    <div class="large-12 columns">
+    <div class="medium-12 columns">
 
       <div class="row">
-        <div class="introduction columns large-12">
+        <div class="introduction columns medium-12">
           <p>
             Conda is the cross-platform tool for managing packages and
             environments.
@@ -52,6 +52,9 @@
                     </li>
                     <li>
                       <i class="fa fa-archive"></i><span>Numpy</span>
+                    </li>
+                    <li>
+                      <i class="fa fa-archive"></i><span>… many more</span>
                     </li>
                   </ul>
                 </div>
@@ -98,24 +101,25 @@
       </div>
 
       <div class="row getting-started" data-equalizer>
-        <div class="small-1 large-12 columns">
+        <div class="small-1 medium-12 columns">
 
         </div>
 
 
-        <div class="small-1 large-6 columns">
+        <div class="small-1 medium-6 columns">
           <h2>Already have Python?</h2>
 
-          {% call code.block("bash") %}
-$ pip install conda
-$ conda init
-$ conda create --name work "python&lt;3"
-$ source activate work
-          {% endcall %}
+          <p>
+            Conda is meant to be standalone to your existing operating system.
+            Rather than use Conda with that system, we <em>strongly</em>
+            recommend that you install with the
+            <a href="http://conda.pydata.org/miniconda.html#miniconda">Miniconda</a>
+            tool.
+          </p>
 
         </div>
 
-        <div class="small-1 large-6 columns">
+        <div class="small-1 medium-6 columns">
           <h2>New to Python?</h2>
 
           <p>
@@ -128,7 +132,186 @@ $ source activate work
       </div>
 
       <div class="row">
-        <h2>Setting Up</h2>
+        <div class="medium-12 columns">
+          <h2>First Five Minutes with Conda</h2>
+
+          <p>
+            The first thing you need to do is create an environment.  These
+            hold all of the packages you install.
+          </p>
+
+          {% call code.block("bash") %}
+$ conda create --name dev python
+... output from conda ...
+          {% endcall %}
+
+          <p>
+            This creates a new environment called <em>dev</em> and installs the
+            <em>python</em> package into it.  You can name the envirornment
+            whatever you want but it must include a name.
+          </p>
+
+          <p>
+            Next you need to activate the environment so you can use it.  To do
+            that on OS X or Linux, type the following:
+          </p>
+
+          {% call code.block("bash") %}
+$ source activate dev
+... activation output ...
+(dev) $
+          {% endcall %}
+
+          <p>
+            On Windows, you don't have to include <code>source</code>:
+          </p>
+
+          {% call code.block("") %}
+$ activate dev
+... activate output ...
+[dev] $
+          {% endcall %}
+
+          <h2>Installing other packages</h2>
+
+          <p>
+            Now when you type <code>python</code> at the command line, you are
+            using a conda managed version of Python.  You can install other
+            packages into this environment with the <code>conda install</code>
+            package.  For example, let's install the <em>lxml</em> package:
+          </p>
+
+          {% call code.block("bash") %}
+(dev) $ conda install lxml
+          {% endcall %}
+
+          <p>
+            Now you can import the <code>lxml</code> module in any Python code
+            you run inside this environment.  You're not limited to just what
+            Conda can install, however.  You can also use Python's
+            <a href="https://pip.pypa.io/">pip</a> installer as well.
+          </p>
+
+          <p>
+            For example, this site is generated using the excellent
+            <a href="http://pythonhosted.org/Frozen-Flask/">Frozen-Flask</a>
+            module that's not available as a conda package.  To install it, you
+            must first install pip, then use pip to install the package.
+          </p>
+
+          {% call code.block("bash") %}
+(dev) $ conda install pip
+... output from conda install ...
+(dev) $ pip install Frozen-Flask
+... output from pip install ...
+          {% endcall %}
+
+          <div class="row">
+            <div class="columns medium-10 medium-offset-1">
+              {% call foundation.alert_box(extra="info", close=False) %}
+                <em>Note on pip</em>: Conda environments replace
+                virtualenv so there's no need to activate a virtualenv before
+                using pip.  Always make sure that you've installed pip into
+                your conda environment and are <em>not</em> using your system
+                pip.
+              {% endcall %}
+            </div>
+          </div>
+
+          <h2>Sharing your environment</h2>
+
+          <p>
+            Conda allows you to specify how you built your environment using
+            the <code>conda env</code> command.  You can export an existing
+            environment and all of its packages like this:
+          </p>
+
+          {% call code.block("bash") %}
+(dev) $ conda env export > environment.yml
+          {% endcall %}
+
+          <p>
+            <code>environment.yml</code> is the convention for an environment
+            file within conda.  Your version numbers will differ slightly, but
+            your file should look something like this:
+          </p>
+
+          {% call code.block("yaml") %}
+name: dev
+dependencies:
+- libxml2=2.9.0=1
+- libxslt=1.1.28=2
+- lxml=3.4.1=py34_0
+- openssl=1.0.1k=0
+- pip=6.0.6=py34_0
+- python=3.4.2=0
+- readline=6.2=2
+- setuptools=12.0.5=py34_0
+- sqlite=3.8.4.1=0
+- tk=8.5.15=0
+- xz=5.0.5=0
+- zlib=1.2.8=0
+- pip:
+  - flask==0.10.1
+  - frozen-flask==0.11
+  - itsdangerous==0.24
+  - jinja2==2.7.3
+  - markupsafe==0.23
+  - werkzeug==0.10.1
+          {% endcall %}
+
+          <p>
+            By default, <code>conda env export</code> includes all of the
+            packages that are installed into your environment and the specific
+            versions that are installed.  Note the line toward the bottom of
+            the <code>dependencies</code> list: <code>- pip:</code>.  That's a
+            nested list that allows you to specify pip packages you need
+            installed in your environment as well.
+          </p>
+
+          <p>
+            You can give this file to another developer and they can create an
+            environment using it.  Let's try doing it ourselves by removing the
+            environment that we've created and recreating it.
+          </p>
+
+          <p>
+            First, start by deactivating the environment so we can remove it,
+            then remove it:
+          </p>
+
+          {% call code.block("bash") %}
+(dev) $ source deactivate
+$ conda env remove --name dev
+... output from conda env remove ...
+          {% endcall %}
+
+          <p>
+            Once the environment is removed, run this command from inside the
+            same directory as your <code>environment.yml</code> file:
+          </p>
+
+          {% call code.block("bash") %}}
+$ conda env create
+... output from conda env create ...
+$ source activate dev
+... output from activation ...
+(dev) $
+          {% endcall %}
+
+          <p>
+            You can verify everything was installed correctly by looking at the
+            output of <code>conda list</code> inside the activated environment.
+          </p>
+
+          <h2>Next steps…</h2>
+
+          <p>
+            Check out <a href="http://conda.pydata.org/docs/">documentation</a>
+            and take a look at <a href="http://conda.pydata.org/docs/build_tutorials/pkgs.html">how
+            to build your own conda packages</a>.
+          </p>
+        </div>
       </div>
     </div>
   </div>

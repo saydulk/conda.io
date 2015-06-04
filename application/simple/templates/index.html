@@ -308,6 +308,39 @@ $ source activate dev
             output of <code>conda list</code> inside the activated environment.
           </p>
 
+          <h2>Upload your environment to anaconda.org</h2>
+
+          <p>
+            Now that you have your <code>environment.yml</code> ready, you can upload
+            it to <a href="http://anaconda.org">anaconda.org</a>. You will first need
+            an account there. Go ahead, it's free!
+          </p>
+
+          <p>
+            With your <a href="http://anaconda.org">anaconda.org</a>'s credentials you
+            are ready to upload your environment with:
+          </p>
+
+          {% call code.block("bash") %}
+$ conda env upload name-of-the-environment
+... output from conda env upload ...
+          {% endcall %}
+
+          <p>
+            <b>Note:</b> you may need to install the binstar client (<code>conda install
+            binstar</code>).
+          </p>
+
+          <p>
+            You can also create an environment with a <code>environment.yml</code>
+            hosted in anaconda.org as in:
+          </p>
+
+          {% call code.block("bash") %}
+$ conda env create malev/data-science
+... output from conda env create ...
+          {% endcall %}
+
           <h2>Next steps…</h2>
 
           <p>

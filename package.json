@@ -23,7 +23,7 @@
     "gulp-livereload": "^2.1.1",
     "gulp-notify": "^2.0.0",
     "gulp-rename": "^1.2.0",
-    "gulp-sass": "^1.2.0",
+    "gulp-sass": "^3.0.0",
     "gulp-util": "^3.0.1",
     "ps-tree": "0.0.3",
     "vinyl-paths": "^1.0.0",

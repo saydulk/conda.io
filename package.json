@@ -12,7 +12,7 @@
   },
   "browserify-shim": {},
   "dependencies": {
-    "browserify": "^6.2.0",
+    "browserify": "^15.0.0",
     "browserify-shim": "^3.8.0",
     "coffee-script": "^1.8.0",
     "coffeeify": "^0.7.0",
